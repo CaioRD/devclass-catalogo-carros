@@ -13,7 +13,10 @@
 :root {
   --orange: #f78b00;
   --blue: #00285f;
+  --blue-opacity: rgba(0,40,95, 0.8);
   --gray: #ededed;
+  --white: #fff;
+  --black: #000;
 }
 
 html,
@@ -23,9 +26,13 @@ body {
 }
 
 header {
+  background-image: url(/images/background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 500px;
-  background: var(--orange);
+  height: 700px;
+  /* opacity: 0.7; */
+  /* background: var(--orange); */
 }
 
 .content {
@@ -69,7 +76,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00285f83;
+  color: var(--white);
+  transition: 0.2s;
 }
 
 nav ul button {
@@ -93,18 +101,18 @@ nav ul button:hover {
   max-width: 1000px;
   min-width: 300px;
   height: 450px;
-  background: var(--blue);
+  background: var(--blue-opacity);
   border-radius: 8px;
   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 10;
-  padding: 10px;
+  padding: 10px;  
 }
 
 .header-block img {
-  width: 50%;
+  width: 60%;
   position: absolute;
   right: 2%;
   bottom: 2%;
@@ -137,6 +145,7 @@ nav ul button:hover {
 section .catalog {
   width: 100vw;
   padding: 100px;
+  
 }
 
 section .filter-card {
@@ -283,9 +292,10 @@ section .card-item {
   align-items: flex-start;
   justify-content: flex-start;
   padding-top: 10%;
+  margin-top: -130px;
 }
 
-.right h3 {
+/* .right h3 {
   text-align: right;
   width: 90%;
   margin-bottom: 20px;
@@ -297,56 +307,31 @@ section .card-item {
   letter-spacing: 2px;
   text-align: right;
   color: rgba(0, 0, 0, 0.4);
+} */
+.right .right-personal{
+  display: inline-flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding: 0;
+  /* margin-bottom: -20px; */
 }
-
-/* Features */
-.features {
-  width: 100%;
-  height: 100%;
-  background: var(--gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0px;
+.right .personal-content h3{
+ margin-top: -85px;
+ margin-left: 120px;
+ display: flex
 }
-
-.title-wrapper-features {
-  padding: 20px 0px;
-}
-
-.feature-card-block {
-  max-width: 1000px;
-  min-width: 300px;
-  height: 600px;
-  background: white;
-  margin: 0 auto;
-  border-radius: 8px;
-  z-index: 10;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  grid-gap: 30px;
-}
-
-.feature-card-item {
-  max-width: 420px;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  border: 1px solid #dedede3b;
-  border-radius: 4px;
-}
-
-.feature-text-content {
-  max-width: 60%;
-  margin: 5px;
-}
-
-.feature-card-item img {
-  width: 64px;
-  height: 64px;
+.right .personal-content p{
+  margin-top: -15px;
+  margin-left: 120px;
+  display: flex
+ }
+.right .personal-content img{
+  width: 15%;
+  border-radius: 50%;
+  margin: 5px 0;
+  padding: 0;
+  margin-bottom: 65px;
 }
 
 /* Footer */
@@ -358,7 +343,7 @@ footer {
 footer .main {
   width: 100%;
   height: 200px;
-  background: var(--orange);
+  background: var(--blue);
   padding: 20px 10px;
 }
 
@@ -391,16 +376,6 @@ footer .main {
 .main .footer-social img {
   width: 32px;
   height: 32px;
-}
-
-footer .last {
-  width: 100%;
-  height: 50px;
-  background: var(--blue);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Responsive adjustments */
